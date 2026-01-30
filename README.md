@@ -91,8 +91,6 @@ To enable automatic skill activation, add the following to your `CLAUDE.md`, `ag
 ```markdown
 ## Design Skills (Auto-apply)
 
-Install: `npx skills add mae616/design-skills` or `/plugin add mae616/design-skills`
-
 When working on design or UI implementation tasks, apply the following decision frameworks from design-skills:
 
 | Context | Skill | Focus |
@@ -113,8 +111,6 @@ Key principles:
 
 ```markdown
 ## デザインスキル（自動適用）
-
-インストール: `npx skills add mae616/design-skills` または `/plugin add mae616/design-skills`
 
 デザインやUI実装のタスクでは、以下の判断軸を適用すること：
 
