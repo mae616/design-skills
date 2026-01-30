@@ -1,0 +1,24 @@
+{
+  "name": "@mae616/design-skills",
+  "version": "1.0.0",
+  "description": "UI/UX design skills for Claude Code and AI agents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mae616/design-skills.git"
+  },
+  "homepage": "https://github.com/mae616/design-skills#readme",
+  "bugs": {
+    "url": "https://github.com/mae616/design-skills/issues"
+  },
+  "keywords": [
+    "claude-code",
+    "skills",
+    "design",
+    "ui",
+    "ux",
+    "frontend",
+    "accessibility"
+  ],
+  "author": "mae616",
+  "license": "MIT"
+}
