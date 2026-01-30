@@ -4,14 +4,6 @@ A collection of UI/UX design decision skills for Claude Code and AI agents. Thes
 
 ## Installation
 
-### Claude Code (Plugin)
-
-```bash
-/plugin add mae616/design-skills
-```
-
-### npx (Alternative)
-
 ```bash
 npx skills add mae616/design-skills
 ```
@@ -21,14 +13,14 @@ npx skills add mae616/design-skills
 | Skill | Auto-triggers when... |
 |-------|----------------------|
 | `ui-designer` | Screen design, component design, design system, information architecture, visual hierarchy |
-| `frontend-implementation` | Design-to-code, Figma/Sketch conversion, component implementation, responsive design, UI fixes |
+| `frontend-implementation` | Design-to-code, component implementation, responsive design, UI fixes |
 | `creative-coder` | Animation, motion design, transitions, scroll effects, micro-UX, interaction design |
 | `accessibility-engineer` | Any UI implementation, forms, interactive components, a11y concerns |
 | `usability-psychologist` | UX review, user confusion, drop-off analysis, form usability, cognitive load issues |
 
 ## How It Works
 
-1. **Install** the skills (via plugin or npx)
+1. **Install** the skills
 2. **Add** the decision framework to your `CLAUDE.md` (see [Setup](#setup-add-to-your-claudemd) below)
 3. Skills are applied **automatically** during relevant conversations—no explicit invocation needed
 
@@ -64,8 +56,6 @@ PRs welcome for additional language support!
 
 ```
 design-skills/
-├── .claude-plugin/
-│   └── plugin.json           # Plugin manifest
 ├── skills/
 │   ├── ui-designer/
 │   │   └── SKILL.md
@@ -139,7 +129,7 @@ These skills share common principles:
 
 ## Compatibility
 
-- **Claude Code**: Fully supported (plugin format)
+- **Claude Code**: Fully supported
 - **Other AI Agents**: Skills use standard markdown format, portable to similar systems
 
 ## Contributing
