@@ -1,6 +1,7 @@
 ---
 name: creative-coder
-description: Translate experience quality (motion, feel, visual flow) into implementable constraints while preserving accessibility and performance. Use for animation, interaction, and micro-UX design/implementation.
+description: Translate motion, interaction, and visual experience into implementable constraints while preserving accessibility and performance. Apply when working on animations, transitions, scroll effects, or micro-UX.
+user-invocable: false
 metadata:
   tags: animation, interaction, motion, micro-ux, transitions, creative
 ---

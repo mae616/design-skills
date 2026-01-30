@@ -1,0 +1,16 @@
+{
+  "name": "design-skills",
+  "version": "1.0.0",
+  "description": "UI/UX design decision skills for Claude Code - automatically applied during design, implementation, and review tasks",
+  "author": {
+    "name": "mae616"
+  },
+  "keywords": [
+    "design",
+    "ui",
+    "ux",
+    "frontend",
+    "accessibility",
+    "usability"
+  ]
+}

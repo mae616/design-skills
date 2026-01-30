@@ -1,6 +1,7 @@
 ---
 name: accessibility-engineer
-description: Apply semantic HTML/JSX and WAI-ARIA correctly and minimally. Ensure keyboard operation, screen reader support, and contrast requirements. Prioritize native elements; avoid ARIA overuse.
+description: Apply semantic HTML/JSX and WAI-ARIA correctly and minimally. Apply when implementing any UI, especially forms, interactive components, or when accessibility is mentioned.
+user-invocable: false
 metadata:
   tags: accessibility, a11y, aria, semantic-html, screen-reader, keyboard
 ---

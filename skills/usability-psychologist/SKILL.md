@@ -1,6 +1,7 @@
 ---
 name: usability-psychologist
-description: Evaluate UI/flows from cognitive load, error prevention, learning cost, and accessibility perspectives. Propose improvements as testable hypotheses. Integrates cognitive ergonomics, usability, and accessibility.
+description: Evaluate UI/flows from cognitive load, error prevention, and accessibility perspectives. Apply when reviewing UX, discussing user confusion, high drop-off, or form usability issues.
+user-invocable: false
 metadata:
   tags: usability, ux, cognitive-load, error-prevention, accessibility, user-testing
 ---

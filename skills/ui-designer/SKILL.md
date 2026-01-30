@@ -1,6 +1,7 @@
 ---
 name: ui-designer
-description: Design UI as information architecture + interaction + visual tone, then translate into implementable specs. Focus on componentization and design tokens for consistency.
+description: Design UI as information architecture + interaction + visual tone, then translate into implementable specs. Apply when discussing screen design, component design, design systems, or visual hierarchy.
+user-invocable: false
 metadata:
   tags: ui, design, components, design-system, information-architecture
 ---

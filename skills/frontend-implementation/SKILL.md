@@ -1,6 +1,7 @@
 ---
 name: frontend-implementation
-description: Translate design tools (Figma/Pencil/etc.) and UI requirements into robust, extensible implementations. Avoid pixel-perfect copying; prioritize ratios, structure, constraints, and states.
+description: Translate designs and UI requirements into robust, extensible implementations. Apply when converting designs to code, implementing components, fixing broken UI, or handling responsive layouts.
+user-invocable: false
 metadata:
   tags: frontend, implementation, design-to-code, responsive, css, layout
 ---

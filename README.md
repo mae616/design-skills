@@ -1,8 +1,16 @@
 # @mae616/design-skills
 
-A collection of UI/UX design skills for Claude Code and other AI agents.
+A collection of UI/UX design decision skills for Claude Code and AI agents. These skills automatically activate during design, implementation, and review tasks.
 
 ## Installation
+
+### Claude Code (Plugin)
+
+```bash
+/plugin add mae616/design-skills
+```
+
+### npx (Alternative)
 
 ```bash
 npx skills add mae616/design-skills
@@ -10,82 +18,95 @@ npx skills add mae616/design-skills
 
 ## Included Skills
 
-| Skill | Description |
-|-------|-------------|
-| `ui-designer` | Design UI as information architecture + interaction + visual tone, translate into implementable specs |
-| `creative-coder` | Translate motion/interaction quality into implementable constraints while preserving a11y and performance |
-| `frontend-implementation` | Translate design tools (Figma/Pencil) to robust, extensible implementations |
-| `usability-psychologist` | Evaluate UI/flows from cognitive load, error prevention, and accessibility perspectives |
-| `accessibility-engineer` | Apply semantic HTML and WAI-ARIA correctly and minimally |
+| Skill | Auto-triggers when... |
+|-------|----------------------|
+| `ui-designer` | Screen design, component design, design system, information architecture, visual hierarchy |
+| `frontend-implementation` | Design-to-code, Figma/Sketch conversion, component implementation, responsive design, UI fixes |
+| `creative-coder` | Animation, motion design, transitions, scroll effects, micro-UX, interaction design |
+| `accessibility-engineer` | Any UI implementation, forms, interactive components, a11y concerns |
+| `usability-psychologist` | UX review, user confusion, drop-off analysis, form usability, cognitive load issues |
 
-## When Skills Apply
+## How It Works
 
-These skills have `user-invocable: false`, meaning they activate automatically based on context rather than being called directly.
+All skills have `user-invocable: false`, meaning they activate **automatically** based on conversation context rather than requiring explicit invocation.
 
-### Trigger Examples
-
-- **ui-designer**: screen design, UI design, component design, design system, information architecture
-- **creative-coder**: animation, interaction, motion design, transitions, micro-UX
-- **frontend-implementation**: UI implementation, design-to-code, Figma to code, responsive design
-- **usability-psychologist**: hard to use, high drop-off, confusing, accessibility issues
-- **accessibility-engineer**: accessibility, a11y, WAI-ARIA, semantic HTML, keyboard navigation
-
-**Note:** Skills currently support English and Japanese trigger keywords only. PRs welcome for other languages!
-
-## Usage Examples
-
-After installation, these skills automatically activate when you ask relevant questions:
+### Example Conversations
 
 ```
-# Triggers ui-designer skill
-"Design a dashboard layout for analytics"
+User: "Design a dashboard layout for analytics"
+→ ui-designer skill activates
 
-# Triggers frontend-implementation skill
-"Convert this Figma design to React components"
+User: "Convert this Figma design to React"
+→ frontend-implementation + accessibility-engineer skills activate
 
-# Triggers accessibility-engineer skill
-"Make this form accessible"
+User: "Add a smooth page transition"
+→ creative-coder skill activates
 
-# Triggers creative-coder skill
-"Add a smooth page transition animation"
+User: "Users keep abandoning our checkout form"
+→ usability-psychologist skill activates
 
-# Triggers usability-psychologist skill
-"Users are dropping off at the checkout form"
+User: "Make this modal keyboard accessible"
+→ accessibility-engineer skill activates
 ```
 
-## Compatibility
+## Language Support
 
-- **Claude Code**: Tested with Claude Code CLI
-- **Other AI Agents**: Skills follow standard markdown format, compatible with agents that support similar skill/rule systems
+Skills support **English** and **Japanese** trigger keywords.
+
+- English: "design", "implement", "animation", "accessibility", "usability"
+- Japanese: 画面設計, UI実装, アニメーション, アクセシビリティ, 使いにくい
+
+PRs welcome for additional language support!
 
 ## File Structure
 
 ```
 design-skills/
+├── .claude-plugin/
+│   └── plugin.json           # Plugin manifest
+├── skills/
+│   ├── ui-designer/
+│   │   └── SKILL.md
+│   ├── frontend-implementation/
+│   │   └── SKILL.md
+│   ├── creative-coder/
+│   │   └── SKILL.md
+│   ├── accessibility-engineer/
+│   │   └── SKILL.md
+│   └── usability-psychologist/
+│       └── SKILL.md
 ├── package.json
 ├── README.md
-├── LICENSE
-└── skills/
-    ├── ui-designer/SKILL.md
-    ├── creative-coder/SKILL.md
-    ├── frontend-implementation/SKILL.md
-    ├── usability-psychologist/SKILL.md
-    └── accessibility-engineer/SKILL.md
+└── LICENSE
 ```
+
+## Skill Philosophy
+
+These skills share common principles:
+
+1. **Systematic over ad-hoc** - Use tokens, components, and patterns instead of one-off solutions
+2. **States are specs** - Loading, error, empty, disabled states must be defined
+3. **Accessibility by default** - Not an afterthought; built into every implementation
+4. **Intent over pixels** - Understand purpose before translating to code
+
+## Compatibility
+
+- **Claude Code**: Fully supported (plugin format)
+- **Other AI Agents**: Skills use standard markdown format, portable to similar systems
 
 ## Contributing
 
-Contributions are welcome! Here's how you can help:
+Contributions welcome!
 
-1. **Add language support**: Add trigger keywords in your language to the "When to Apply" section of each skill
-2. **Improve content**: Fix typos, clarify explanations, add examples
-3. **Report issues**: Open an issue if you find problems or have suggestions
+- **Add language support**: Extend trigger keywords in "When to Apply" sections
+- **Improve content**: Clarify explanations, add examples, fix issues
+- **Report bugs**: Open an issue for problems or suggestions
 
 ### How to Contribute
 
 1. Fork this repository
 2. Create a branch (`git checkout -b feature/your-feature`)
-3. Make your changes
+3. Make changes and test
 4. Submit a Pull Request
 
 ## License
