@@ -28,7 +28,9 @@ npx skills add mae616/design-skills
 
 ## How It Works
 
-All skills have `user-invocable: false`, meaning they activate **automatically** based on conversation context rather than requiring explicit invocation.
+1. **Install** the skills (via plugin or npx)
+2. **Add** the decision framework to your `CLAUDE.md` (see [Setup](#setup-add-to-your-claudemd) below)
+3. Skills are applied **automatically** during relevant conversations—no explicit invocation needed
 
 ### Example Conversations
 
@@ -78,6 +80,52 @@ design-skills/
 ├── package.json
 ├── README.md
 └── LICENSE
+```
+
+## Setup: Add to Your CLAUDE.md
+
+To enable automatic skill activation, add the following to your `CLAUDE.md`, `agent.md`, or system prompt:
+
+### English Version
+
+```markdown
+## Design Skills (Auto-apply)
+
+When working on design or UI implementation tasks, apply the following decision frameworks from design-skills:
+
+| Context | Skill | Focus |
+|---------|-------|-------|
+| Screen/component design | ui-designer | Information architecture → visual hierarchy → componentization |
+| Design to code | frontend-implementation | Intent over pixels, structure over magic numbers, states are specs |
+| Animation/interaction | creative-coder | Purpose-driven motion, a11y-safe, performance-aware |
+| Any UI implementation | accessibility-engineer | Native elements first, minimal ARIA, keyboard baseline |
+| UX review/friction | usability-psychologist | Cognitive load, error prevention, consistency |
+
+Key principles:
+- States (loading/error/empty/disabled) must be defined—not afterthoughts
+- Use tokens/components/patterns instead of one-off solutions
+- Accessibility is built-in, not bolted-on
+```
+
+### Japanese Version / 日本語版
+
+```markdown
+## デザインスキル（自動適用）
+
+デザインやUI実装のタスクでは、以下の判断軸を適用すること：
+
+| コンテキスト | スキル | 観点 |
+|-------------|--------|------|
+| 画面・コンポーネント設計 | ui-designer | 情報設計→視覚階層→コンポーネント化 |
+| デザインから実装 | frontend-implementation | ピクセルより意図、マジックナンバーより構造、状態も仕様 |
+| アニメーション・インタラクション | creative-coder | 目的ある動き、a11y安全、パフォーマンス意識 |
+| UI実装全般 | accessibility-engineer | ネイティブ要素優先、ARIA最小、キーボード基本 |
+| UXレビュー・離脱分析 | usability-psychologist | 認知負荷、エラー防止、一貫性 |
+
+共通原則：
+- 状態（loading/error/empty/disabled）は後付けではなく仕様として定義
+- 場当たりではなくトークン・コンポーネント・パターンで統一
+- アクセシビリティは最初から組み込む
 ```
 
 ## Skill Philosophy
